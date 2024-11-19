@@ -1,9 +1,15 @@
 using UnityEngine;
 
-public class PongBall : MonoBehaviour
+public class PongBall : MonoBehaviour, IDamage
 {
     public Rigidbody2D rb;
     public int Startingspeed = 1;
+
+
+    public void TakeDamage(int damage)
+    {
+        Destroy(gameObject);
+    }
 
     void Start()
     {

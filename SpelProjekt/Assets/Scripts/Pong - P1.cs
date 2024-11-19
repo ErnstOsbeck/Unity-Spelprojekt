@@ -11,16 +11,16 @@ public class PongP1 : MonoBehaviour
 
     void Update()
     {
-        bool isPressingUp = Input.GetKeyUp(KeyCode.W);
-        bool isPressingDown = Input.GetKeyUp(KeyCode.S);
+        Vector3 velocity = new Vector3();
+        if (Input.GetKey(KeyCode.W))
+        {
+            velocity.y = 1;
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            velocity.y = -1;
+        }
 
-        if (isPressingUp)
-        {
-            transform.Translate(Vector2.up * Time.deltaTime * moveSpeed);
-        }
-        if (isPressingDown)
-        {
-            transform.Translate(Vector2.down * Time.deltaTime * moveSpeed);
-        }
+        transform.position += velocity * Time.deltaTime * moveSpeed;
     }
 }
