@@ -1,10 +1,13 @@
+using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.UIElements;
 
-public class PongBall : MonoBehaviour, IDamage
+public class PongBall : PongP1, IDamage
 {
     public Rigidbody2D rb;
     public int Startingspeed = 1;
-
+    public PongP1 Player;
+    public Vector2 playerPosition;
 
     public void TakeDamage(int damage)
     {
@@ -25,9 +28,18 @@ public class PongBall : MonoBehaviour, IDamage
         float yVelocity = UnityEngine.Random.Range(-1, 1f);
 
         rb.linearVelocity = new Vector2 (xVelocity * Startingspeed, yVelocity * Startingspeed);
+        
     }
-
-    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("bounce");
+        playerPosition = Camera.main.ScreenToWorldPoint(Player.transform.position);
+        Vector2 bounceDirection = playerPosition - rb.position;
+        float bounceAngle = Mathf.Atan2(bounceDirection.y, bounceDirection.x) * Mathf.Rad2Deg - 90f;
+        float xVelocity = math.cos(bounceAngle);
+        float yVelocity = math.sin(-bounceAngle);
+        rb.linearVelocity = new Vector2(xVelocity * Startingspeed, yVelocity * Startingspeed);
+    }
     void Update()
     {
         
