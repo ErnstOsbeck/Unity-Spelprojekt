@@ -13,11 +13,11 @@ public class Destroy : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Ball"))
         {
-            Destroy(other.gameObject);
+            Destroy(this.gameObject);
         }
     }
 }
