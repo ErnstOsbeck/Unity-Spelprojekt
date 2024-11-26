@@ -32,8 +32,10 @@ public class PongBall : PongP1, IDamage
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.collider.tag != "Player" && collision.collider.tag != "Enemy")
+            return;
         Debug.Log("bounce");
-        playerPosition = Camera.main.ScreenToWorldPoint(Player.transform.position);
+        Vector2 playerPosition = collision.collider.transform.position;
         Vector2 bounceDirection = playerPosition - rb.position;
         float bounceAngle = Mathf.Atan2(bounceDirection.y, bounceDirection.x) * Mathf.Rad2Deg - 90f;
         float xVelocity = math.cos(bounceAngle);

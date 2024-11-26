@@ -3,10 +3,11 @@ using UnityEngine;
 public class PongP1 : MonoBehaviour
 {
     public float moveSpeed;
+    public ParticleSystem ps;
     
     void Start()
     {
-        
+        ps = GetComponentInChildren<ParticleSystem>();
     }
 
     void Update()
@@ -22,5 +23,6 @@ public class PongP1 : MonoBehaviour
         }
 
         transform.position += velocity * Time.deltaTime * moveSpeed;
+
     }
 }

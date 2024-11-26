@@ -175,5 +175,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f53a9848f3e2c8444b614a32d086f870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 0
   rb: {fileID: 8098608660574335717}
   Startingspeed: 10
+  Player: {fileID: 0}
+  playerPosition: {x: 0, y: 0}

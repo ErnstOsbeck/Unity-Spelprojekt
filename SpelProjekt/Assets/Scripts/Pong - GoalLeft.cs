@@ -16,7 +16,7 @@ public class PongGoalLeft : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider2D other)
     {
         IDamage damageable = other.GetComponent<IDamage>();
         if (damageable != null)

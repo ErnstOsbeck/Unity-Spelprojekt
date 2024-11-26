@@ -6452,6 +6452,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 7234554560466995073, guid: a0a7215636aa5e24aa27f29e23c4faaa, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8230158440791329271, guid: a0a7215636aa5e24aa27f29e23c4faaa, type: 3}
       propertyPath: Startingspeed
       value: 5
