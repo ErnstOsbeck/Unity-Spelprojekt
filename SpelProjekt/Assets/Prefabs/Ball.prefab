@@ -176,6 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0
+  ps: {fileID: 0}
   rb: {fileID: 8098608660574335717}
   Startingspeed: 10
   Player: {fileID: 0}
