@@ -1,4 +1,6 @@
+using TMPro;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -8,11 +10,15 @@ public class PongBall : PongP1, IDamage
     public int Startingspeed = 1;
     public PongP1 Player;
     public Vector2 playerPosition;
+    
+    
 
     public void TakeDamage(int damage)
     {
         Destroy(gameObject);
     }
+    
+
 
     void Start()
     {

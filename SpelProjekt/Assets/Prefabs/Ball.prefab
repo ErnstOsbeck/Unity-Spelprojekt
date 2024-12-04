@@ -178,6 +178,8 @@ MonoBehaviour:
   moveSpeed: 0
   ps: {fileID: 0}
   rb: {fileID: 8098608660574335717}
-  Startingspeed: 10
+  Startingspeed: 5
   Player: {fileID: 0}
   playerPosition: {x: 0, y: 0}
+  left: {fileID: 0}
+  right: {fileID: 0}

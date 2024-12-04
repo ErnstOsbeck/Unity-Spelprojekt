@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PongGoalLeft : MonoBehaviour
+public class PongGoalRight : MonoBehaviour
 {
     [SerializeField]
     private int score = 0;
@@ -8,13 +8,13 @@ public class PongGoalLeft : MonoBehaviour
     private int damage = 1;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
