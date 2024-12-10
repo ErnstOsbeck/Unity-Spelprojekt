@@ -47,6 +47,10 @@ public class PongBall : PongP1, IDamage
         float xVelocity = math.cos(bounceAngle);
         float yVelocity = math.sin(-bounceAngle);
         rb.linearVelocity = new Vector2(xVelocity * Startingspeed, yVelocity * Startingspeed);
+        if(xVelocity < 4)
+        {
+            xVelocity++;
+        }
     }
     void Update()
     {
