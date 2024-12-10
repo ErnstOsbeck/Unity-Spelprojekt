@@ -17,6 +17,7 @@ public class Destroy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ball"))
         {
+            
             Destroy(this.gameObject);
         }
     }
