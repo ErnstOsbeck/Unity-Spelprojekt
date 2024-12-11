@@ -3,7 +3,7 @@ using UnityEngine;
 public class PongGoalLeft : MonoBehaviour
 {
     [SerializeField]
-    private int score = 0;
+    public int lScore = 0;
     public GameObject Ball;
     private int damage = 1;
     void Start()
@@ -23,7 +23,7 @@ public class PongGoalLeft : MonoBehaviour
         {
             damageable.TakeDamage(damage);
         }
-        score++;
+        lScore++;
         Instantiate(Ball);
     }
 }

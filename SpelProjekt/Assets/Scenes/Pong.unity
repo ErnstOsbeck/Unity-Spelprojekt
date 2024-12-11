@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b45a000a21e0f64b8f6e70d290c73d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
+  lScore: 0
   Ball: {fileID: 5499675990778413418, guid: a0a7215636aa5e24aa27f29e23c4faaa, type: 3}
 --- !u!1 &509510599
 GameObject:
@@ -222,6 +222,7 @@ GameObject:
   - component: {fileID: 509510600}
   - component: {fileID: 509510602}
   - component: {fileID: 509510601}
+  - component: {fileID: 509510603}
   m_Layer: 5
   m_Name: PlayerScore
   m_TagString: Untagged
@@ -347,6 +348,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 509510599}
   m_CullTransparentMesh: 1
+--- !u!114 &509510603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509510599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f104798807948644cbdba03e0af2ac43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMeshPro: {fileID: 509510601}
+  pScore: {fileID: 1465052196}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -6016,7 +6031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7ddb9fedac92f4468af2d06a393a343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
+  rScore: 0
   Ball: {fileID: 5499675990778413418, guid: a0a7215636aa5e24aa27f29e23c4faaa, type: 3}
 --- !u!1 &1697948531
 GameObject:
@@ -11055,6 +11070,7 @@ GameObject:
   - component: {fileID: 1941730876}
   - component: {fileID: 1941730878}
   - component: {fileID: 1941730877}
+  - component: {fileID: 1941730879}
   m_Layer: 5
   m_Name: OpponentScore
   m_TagString: Untagged
@@ -11078,7 +11094,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 272, y: 127}
+  m_AnchoredPosition: {x: 424, y: 127}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1941730877
@@ -11180,6 +11196,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1941730875}
   m_CullTransparentMesh: 1
+--- !u!114 &1941730879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941730875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e007d26429626d4982a0ab1dbb01dd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMeshPro: {fileID: 1941730877}
+  pScore: {fileID: 489371315}
 --- !u!1 &1963098605
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,9 +3,10 @@ using UnityEngine;
 public class PongGoalRight : MonoBehaviour
 {
     [SerializeField]
-    private int score = 0;
+    public int rScore = 0;
     public GameObject Ball;
     private int damage = 1;
+    
     void Start()
     {
 
@@ -23,7 +24,7 @@ public class PongGoalRight : MonoBehaviour
         {
             damageable.TakeDamage(damage);
         }
-        score++;
+        rScore++;
         Instantiate(Ball);
     }
 }
